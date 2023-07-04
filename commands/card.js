@@ -21,7 +21,7 @@ module.exports = {
         let b = interaction.options.getNumber("寬_利奧拉"); // 已經幫你們宣告好變數了，這裡不需要改
         let c = interaction.options.getNumber("長_史考特"); // 已經幫你們宣告好變數了，這裡不需要改
         let d = interaction.options.getNumber("寬_史考特"); // 已經幫你們宣告好變數了，這裡不需要改
-        let bmi = a - b * b; // 公式好像怪怪的，應該要如何更改呢?
+        let bmi = a * b- c * d; // 公式好像怪怪的，應該要如何更改呢?
         await interaction.reply(`${bmi}`);
     },
 };
