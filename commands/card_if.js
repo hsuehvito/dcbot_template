@@ -21,16 +21,16 @@ module.exports = {
         let b = interaction.options.getNumber("寬_利奧拉"); // 已經幫你們宣告好變數了，這裡不需要改
         let c = interaction.options.getNumber("長_史考特"); // 已經幫你們宣告好變數了，這裡不需要改
         let d = interaction.options.getNumber("寬_史考特"); // 已經幫你們宣告好變數了，這裡不需要改
-        let bmi = a - b * b; // 公式好像怪怪的，應該要如何更改呢?
-        if (bmi < 18.5) {
+        let bmi = a * b- c * d; // 公式好像怪怪的，應該要如何更改呢?
+        if (bmi < 0) {
             // 如何判斷 大或小
-            await interaction.reply(`體重過輕 bmi=${bmi}`); // 如果符合，應該回覆甚麼訊息
-        } else if (bmi >= 18.5 && bmi < 24) {
+            await interaction.reply("史考特贏"); // 如果符合，應該回覆甚麼訊息
+        } else if (bmi >0) {
             // 應該要如何判斷剩下的
-            await interaction.reply(`體重適中 bmi=${bmi}`); // 如果符合，應該回覆甚麼訊息
+            await interaction.reply("利奧拉贏"); // 如果符合，應該回覆甚麼訊息
         } else {
             // 最後一個應該是甚麼情況
-            await interaction.reply(`體重過重 bmi=${bmi}`); // 如果符合，應該回覆甚麼訊息
+            await interaction.reply("平手"); // 如果符合，應該回覆甚麼訊息
         }
     },
 };
